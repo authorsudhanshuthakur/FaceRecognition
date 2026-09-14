@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://feliseye-api.onrender.com/api/$1"
+    },
+    {
+      "source": "/data/(.*)",
+      "destination": "https://feliseye-api.onrender.com/data/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/static/index.html"
+    },
+    {
+      "source": "/static/(.*)",
+      "destination": "/static/$1"
+    }
+  ]
+}

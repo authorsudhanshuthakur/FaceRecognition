@@ -1,0 +1,23 @@
+# Netlify Configuration for FelisEye Web App
+[build]
+  publish = "static"
+
+# Proxy API requests to your hosted FelisEye backend
+[[redirects]]
+  from = "/api/*"
+  to = "https://feliseye-api.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+# Proxy photo/avatar requests to your hosted FelisEye backend
+[[redirects]]
+  from = "/data/*"
+  to = "https://feliseye-api.onrender.com/data/:splat"
+  status = 200
+  force = true
+
+# Fallback routing for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
